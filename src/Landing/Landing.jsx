@@ -134,19 +134,23 @@ function Landing() {
                   className="index-division-2 "
                 >
                   <motion.h2
-                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
-                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 1, ease: "easeInOut" }}
-                  viewport={{ amount: 0.3 }}
+                    initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                    whileInView={
+                      scrollPos ? "down" && { opacity: 1, y: 0 } : {}
+                    }
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    viewport={{ amount: 0.3 }}
                   >
                     "Maximize the Impact of Your Brand with Strategic Branding
                     Choices"
                   </motion.h2>
                   <motion.p
-                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
-                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 1, ease: "easeInOut" }}
-                  viewport={{ amount: 0.3 }}
+                    initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                    whileInView={
+                      scrollPos ? "down" && { opacity: 1, y: 0 } : {}
+                    }
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    viewport={{ amount: 0.3 }}
                   >
                     We specialize in creating professional branding resources,
                     including logos, packaging designs, pitch decks, custom
@@ -167,19 +171,19 @@ function Landing() {
               viewport={{ amount: 0.3 }}
               className="index-division-3"
             >
-              <motion.h2 
-              initial={isMobile ? { opacity: 0, y: 100 } : {}}
-              whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              viewport={{ amount: 0.3 }}
+              <motion.h2
+                initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ amount: 0.3 }}
               >
                 Leave the Heavy Lifting to us, watch your brand Thrive
               </motion.h2>
               <motion.p
-              initial={isMobile ? { opacity: 0, y: 100 } : {}}
-              whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              viewport={{ amount: 0.3 }}
+                initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ amount: 0.3 }}
               >
                 As your partner in growth, we’re invested in your success just
                 as much as you are. Our team of experts will handle all the
@@ -206,9 +210,8 @@ function Landing() {
           </section>
 
           <section className="middle-section">
-            <MiddlePart/>
+            <MiddlePart />
           </section>
-          
 
           {/* <section className="index-section-5">
             <div className="index-division-5-1">

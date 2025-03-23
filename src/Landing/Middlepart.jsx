@@ -31,16 +31,28 @@ function MiddlePart() {
       <section className="index-section-5">
         <div className="index-division-5-1">
           <ul>
-            <li className={activeSection === "section1" ? "active" : ""} id="one">
+            <li
+              className={activeSection === "section1" ? "active" : ""}
+              id="one"
+            >
               Creative Branding
             </li>
-            <li className={activeSection === "section2" ? "active" : ""} id="two">
+            <li
+              className={activeSection === "section2" ? "active" : ""}
+              id="two"
+            >
               Influencer Marketing
             </li>
-            <li className={activeSection === "section3" ? "active" : ""} id="three">
+            <li
+              className={activeSection === "section3" ? "active" : ""}
+              id="three"
+            >
               Brand Strategy
             </li>
-            <li className={activeSection === "section4" ? "active" : ""} id="four">
+            <li
+              className={activeSection === "section4" ? "active" : ""}
+              id="four"
+            >
               Consulting
             </li>
           </ul>

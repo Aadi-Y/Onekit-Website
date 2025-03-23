@@ -239,7 +239,6 @@ video {
   top: 100px;
 } */
 
-
 /* .index-division-5-1 li {
   font-size: 3rem;
   margin-top: 2.3rem;
@@ -296,11 +295,12 @@ video {
   overflow-y: hidden;
   width: 220px;
   /* height: 90vh; */
-  -ms-overflow-style:none;
+  -ms-overflow-style: none;
   scrollbar-width: none;
   /* margin-bottom: 20px; */
 }
-.index-division-6-2,.index-division-6-3{
+.index-division-6-2,
+.index-division-6-3 {
   min-height: 100%;
   display: flex;
   align-items: center;
@@ -309,7 +309,8 @@ video {
   margin-right: 5px;
   column-gap: 10px;
 }
-.index-division-6-2 img ,.index-division-6-3 img{
+.index-division-6-2 img,
+.index-division-6-3 img {
   /* width: 210px; */
   flex: 1;
   height: 83vh;
@@ -406,7 +407,7 @@ video {
   transform-origin: center;
 }
 
-.index-section-middlepart{
+.index-section-middlepart {
   /* margin-top: 150px; */
   /* margin-left: 150px; */
 }
@@ -820,7 +821,6 @@ h3 {
 .index-footer-main-content {
   margin-bottom: 20px;
   max-width: 87%;
-  
 }
 .index-footer-main-content p {
   font-size: 14.5px;
@@ -957,26 +957,32 @@ h3 {
     height: 620px;
     width: 620px;
   }
-  .index-section-9{
+  .index-section-9 {
     flex-direction: column;
     height: 170vh;
     margin-bottom: 100px;
   }
-  .index-division-9-1{
+  .index-division-9-1 {
     flex-direction: column;
   }
-  .index-division-9-2{
+  .index-division-9-2 {
     flex-direction: column;
   }
-  .index-division-9-11{
+  .index-division-9-11 {
     flex-direction: column;
   }
-  .index-division-9-1-1,.index-division-9-1-3,.index-division-9-2-1,.index-division-9-2-3{
+  .index-division-9-1-1,
+  .index-division-9-1-3,
+  .index-division-9-2-1,
+  .index-division-9-2-3 {
     width: 50%;
     margin: 0 auto;
     height: 300px;
   }
-  .index-division-9-1-2,.index-division-9-1-4,.index-division-9-2-2,.index-division-9-2-4{
+  .index-division-9-1-2,
+  .index-division-9-1-4,
+  .index-division-9-2-2,
+  .index-division-9-2-4 {
     display: none;
   }
   .index-section-10 {
@@ -1061,18 +1067,16 @@ h3 {
     grid-area: footerImage;
     margin: 10px 95px;
   }
-  .index-section-6 h2{
+  .index-section-6 h2 {
     font-size: 5rem;
     margin-top: 50px;
   }
-  .index-section-6 p{
+  .index-section-6 p {
     font-size: 15px;
   }
-  .index-section-6-1{
+  .index-section-6-1 {
     margin-top: 100px;
   }
-  
-
 }
 @media (max-width: 1000px) {
   .index-division-1,
@@ -1121,40 +1125,46 @@ h3 {
     height: 600px;
     width: 600px;
   }
-  .index-section-9{
+  .index-section-9 {
     flex-direction: column;
     height: 170vh;
     margin-bottom: 100px;
   }
-  .index-division-9-1{
+  .index-division-9-1 {
     flex-direction: column;
   }
-  .index-division-9-2{
+  .index-division-9-2 {
     flex-direction: column;
   }
-  .index-division-9-11{
+  .index-division-9-11 {
     flex-direction: column;
   }
-  .index-division-9-1-1,.index-division-9-1-3,.index-division-9-2-1,.index-division-9-2-3{
+  .index-division-9-1-1,
+  .index-division-9-1-3,
+  .index-division-9-2-1,
+  .index-division-9-2-3 {
     width: 60%;
     margin: 0 auto;
     height: 300px;
   }
-  .index-division-9-1-2,.index-division-9-1-4,.index-division-9-2-2,.index-division-9-2-4{
+  .index-division-9-1-2,
+  .index-division-9-1-4,
+  .index-division-9-2-2,
+  .index-division-9-2-4 {
     display: none;
   }
   .index-division-10-2 button {
     font-size: 0.7rem;
     width: 100%;
   }
-  .index-section-6 h2{
+  .index-section-6 h2 {
     font-size: 4rem;
     margin-top: 50px;
   }
-  .index-section-6 p{
+  .index-section-6 p {
     font-size: 15px;
   }
-  .index-section-6-1{
+  .index-section-6-1 {
     margin-top: 100px;
   }
 }
@@ -1228,14 +1238,14 @@ h3 {
   .index-division-7-1 h2 {
     margin-bottom: 20px;
   }
-  .index-section-6 h2{
+  .index-section-6 h2 {
     font-size: 4rem;
     margin-top: 50px;
   }
-  .index-section-6 p{
+  .index-section-6 p {
     font-size: 15px;
   }
-  .index-section-6-1{
+  .index-section-6-1 {
     margin-top: 50px;
   }
 }
@@ -1436,39 +1446,45 @@ h3 {
     grid-area: footerImage;
     margin-left: 20vw;
   }
-  .index-section-9{
+  .index-section-9 {
     flex-direction: column;
     height: 170vh;
   }
-  .index-division-9-1{
+  .index-division-9-1 {
     flex-direction: column;
   }
-  .index-division-9-2{
+  .index-division-9-2 {
     flex-direction: column;
   }
-  .index-division-9-11{
+  .index-division-9-11 {
     flex-direction: column;
   }
-  .index-division-9-1-1,.index-division-9-1-3,.index-division-9-2-1,.index-division-9-2-3{
+  .index-division-9-1-1,
+  .index-division-9-1-3,
+  .index-division-9-2-1,
+  .index-division-9-2-3 {
     width: 85%;
     margin: 0 auto;
     height: 300px;
   }
-  .index-division-9-1-2,.index-division-9-1-4,.index-division-9-2-2,.index-division-9-2-4{
+  .index-division-9-1-2,
+  .index-division-9-1-4,
+  .index-division-9-2-2,
+  .index-division-9-2-4 {
     display: none;
   }
 
-  .index-section-6 h2{
+  .index-section-6 h2 {
     font-size: 3rem;
     margin-top: 50px;
   }
-  .index-section-6 p{
+  .index-section-6 p {
     font-size: 15px;
   }
-  .index-section-6-1{
+  .index-section-6-1 {
     margin-top: 50px;
   }
-  .index-division-4{
+  .index-division-4 {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -1478,7 +1494,7 @@ h3 {
     color: hsl(0, 0%, 30%);
     text-align: center;
   }
-  
+
   .index-division-4 p {
     font-size: 15px;
     text-align: center;
@@ -1494,7 +1510,4 @@ h3 {
   .index-division-5-1{
     display: contents;
   } */
-  
-
-
 }
