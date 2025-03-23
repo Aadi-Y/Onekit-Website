@@ -12,7 +12,11 @@ dist
 dist-ssr
 *.local
 Practice
-
+Testing.css
+Testing.jsx
+MiddlePart.css
+MiddlePart1.css
+MiddlePart.jsx
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
