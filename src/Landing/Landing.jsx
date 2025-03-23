@@ -25,11 +25,26 @@ import { FiYoutube } from "react-icons/fi";
 import { FaBehance } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { useState, useEffect } from "react";
+//component
+import MiddlePart from "./MiddlePart";
 
-//components
-// import MiddlePart from "./MiddlePart";
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(window.matchMedia(query).matches);
+
+  useEffect(() => {
+    const mediaQueryList = window.matchMedia(query);
+    const listener = (event) => setMatches(event.matches);
+
+    mediaQueryList.addEventListener("change", listener);
+    return () => mediaQueryList.removeEventListener("change", listener);
+  }, [query]);
+
+  return matches;
+};
 
 function Landing() {
+  const isMobile = useMediaQuery("(max-width: 540px)");
+
   const [scrollPos, setScrollPos] = useState("down");
   let lastPosition = window.scrollY;
 
@@ -73,19 +88,31 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
+                style={isMobile ? { display: "contents" } : {}}
                 className="index-division-1"
               >
-                <h2 className="heavy-text">
+                <motion.h2
+                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ amount: 0.3 }}
+                  className="heavy-text"
+                >
                   "Sketching exceptional apps,one pixel at a time"
-                </h2>
-                <p>
+                </motion.h2>
+                <motion.p
+                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ amount: 0.3 }}
+                >
                   Experience the best in class UI/UX Design with our team of
                   experts. We specialize in carefully crafting unique and
                   intuitive app and web user interfaces, ensuring user-friendly
                   and visually appealing digital experiences.
-                </p>
+                </motion.p>
               </motion.div>
             </div>
             <div className="index-division-image-1">
@@ -102,21 +129,31 @@ function Landing() {
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
                   viewport={{ amount: 0.3 }}
                   className="index-division-2 "
                 >
-                  <h2>
+                  <motion.h2
+                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ amount: 0.3 }}
+                  >
                     "Maximize the Impact of Your Brand with Strategic Branding
                     Choices"
-                  </h2>
-                  <p>
+                  </motion.h2>
+                  <motion.p
+                  initial={isMobile ? { opacity: 0, y: 100 } : {}}
+                  whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ amount: 0.3 }}
+                  >
                     We specialize in creating professional branding resources,
                     including logos, packaging designs, pitch decks, custom
                     T-shirts, and more to help businesses effectively
                     communicate their brand identity and values to their target
                     audience.
-                  </p>
+                  </motion.p>
                 </motion.div>
               </div>
             </section>
@@ -126,17 +163,29 @@ function Landing() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.3 }}
               className="index-division-3"
             >
-              <h2>Leave the Heavy Lifting to us, watch your brand Thrive</h2>
-              <p>
+              <motion.h2 
+              initial={isMobile ? { opacity: 0, y: 100 } : {}}
+              whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ amount: 0.3 }}
+              >
+                Leave the Heavy Lifting to us, watch your brand Thrive
+              </motion.h2>
+              <motion.p
+              initial={isMobile ? { opacity: 0, y: 100 } : {}}
+              whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ amount: 0.3 }}
+              >
                 As your partner in growth, we’re invested in your success just
                 as much as you are. Our team of experts will handle all the
                 marketing research and strategy development, so you can focus on
                 what truly matters—expanding your brand.
-              </p>
+              </motion.p>
             </motion.div>
           </section>
 
@@ -144,7 +193,7 @@ function Landing() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.3 }}
               className="index-division-4"
             >
@@ -155,11 +204,12 @@ function Landing() {
               </p>
             </motion.div>
           </section>
+
+          <section className="middle-section">
+            <MiddlePart/>
+          </section>
           
-          {/* <section className="index-section-middlepart">
-            <MiddlePart />
-          </section> */}
-          
+
           {/* <section className="index-section-5">
             <div className="index-division-5-1">
               <ul>
@@ -173,7 +223,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-div-5-2-1"
               >
@@ -191,7 +241,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-div-5-2-2"
               >
@@ -212,7 +262,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-div-5-2-3"
               >
@@ -231,7 +281,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-div-5-2-4"
               >
@@ -253,7 +303,7 @@ function Landing() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.3 }}
               className="index-division-6"
             >
@@ -289,7 +339,7 @@ function Landing() {
               <motion.p
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
               >
                 Sanjeev has a successful entrepreneurial journey of over 5 years
@@ -307,7 +357,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-division-7-1-1"
               >
@@ -367,7 +417,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: .5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 className="index-division-9-12"
@@ -395,7 +445,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: .5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 className="index-division-9-13"
@@ -421,7 +471,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: .5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 className="index-division-9-14"
@@ -451,7 +501,7 @@ function Landing() {
           <motion.section
             initial={{ opacity: 0, y: 100 }}
             whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ amount: 0.3 }}
             className="index-section-10"
           >
@@ -459,7 +509,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-division-10-1-1"
               >
@@ -469,7 +519,7 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
                 className="index-division-10-1-2"
               >
@@ -483,7 +533,7 @@ function Landing() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.3 }}
               className="index-division-10-2"
             >

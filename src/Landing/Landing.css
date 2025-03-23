@@ -5,7 +5,7 @@
 }
 .index-main-container {
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   min-width: 100vw;
   position: relative;
 }
@@ -238,6 +238,8 @@ video {
   position: sticky;
   top: 100px;
 } */
+
+
 /* .index-division-5-1 li {
   font-size: 3rem;
   margin-top: 2.3rem;
@@ -260,23 +262,23 @@ video {
   margin-right: 140px;
   margin-left: 20px;
   margin-bottom: 180px;
-} */
+}
 
-/* .index-div-5-2-1 h2,
+.index-div-5-2-1 h2,
 .index-div-5-2-2 h2,
 .index-div-5-2-3 h2,
 .index-div-5-2-4 h2 {
   font-size: 1.9rem;
   margin-bottom: 10px;
-} */
+}
 
-/* .index-div-5-2-1 p,
+.index-div-5-2-1 p,
 .index-div-5-2-2 p,
 .index-div-5-2-3 p,
 .index-div-5-2-4 p {
   font-size: 17px;
   text-align: justify;
-} */
+}  */
 
 .index-section-6 {
   min-height: 100vh;
@@ -298,8 +300,6 @@ video {
   scrollbar-width: none;
   /* margin-bottom: 20px; */
 }
-
-
 .index-division-6-2,.index-division-6-3{
   min-height: 100%;
   display: flex;
@@ -1241,6 +1241,9 @@ h3 {
 }
 
 @media (max-width: 540px) {
+  .index-main-container {
+    overflow: hidden;
+  }
   .index-section-1,
   .index-section-2,
   .index-section-3 {
