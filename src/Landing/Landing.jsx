@@ -27,7 +27,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 
 //components
-import MiddlePart from "./MiddlePart";
+// import MiddlePart from "./MiddlePart";
 
 function Landing() {
   const [scrollPos, setScrollPos] = useState("down");
