@@ -7,24 +7,41 @@ function MiddlePart() {
 
   useEffect(() => {
     const sections = document.querySelectorAll(".index-division-5-2 > div");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.getAttribute("id"));
+    const listItems = document.querySelectorAll(".index-division-5-1 ul li");
+  
+    const checkAlignment = () => {
+      let activeId = null;
+  
+      sections.forEach((section, index) => {
+        const sectionRect = section.getBoundingClientRect();
+        const listItem = listItems[index]; // Matching `li` for each `div`
+  
+        if (listItem) {
+          const listItemRect = listItem.getBoundingClientRect();
+  
+          // Check if the top positions of section and list item are nearly the same
+          if (Math.abs(sectionRect.top - listItemRect.top) < 10) {
+            activeId = section.getAttribute("id");
           }
-        });
-      },
-      { threshold: 0.6 } // Adjust this threshold based on how early you want sections to become active
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
+        }
+      });
+  
+      if (activeId) {
+        setActiveSection(activeId);
+      }
+    };
+  
+    window.addEventListener("scroll", checkAlignment);
+    window.addEventListener("resize", checkAlignment);
+    checkAlignment(); // Run initially
+  
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener("scroll", checkAlignment);
+      window.removeEventListener("resize", checkAlignment);
     };
   }, []);
+  
+  
 
   return (
     <>

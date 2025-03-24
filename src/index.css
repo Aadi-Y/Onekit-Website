@@ -13,6 +13,9 @@
 }
 
 /* Apply the font globally (Optional) */
+h1 {
+    font-family: 'Nexa Heavy', sans-serif;
+}
 h2 {
     font-family: 'Nexa Heavy', sans-serif;
 }

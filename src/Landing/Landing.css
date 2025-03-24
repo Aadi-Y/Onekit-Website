@@ -278,7 +278,9 @@ video {
   font-size: 17px;
   text-align: justify;
 }  */
-
+a{
+  color: hsl(0, 0%, 60%);
+}
 .index-section-6 {
   min-height: 100vh;
   width: 100vw;
@@ -287,6 +289,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 250px;
 }
 .index-section-6-1 {
   margin-top: 100px;
@@ -378,14 +381,14 @@ video {
 .index-division-9-1 {
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 25px;
   height: 50%;
 }
 
 .index-division-9-2 {
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 25px;
   height: 50%;
 }
 
@@ -773,7 +776,7 @@ h3 {
 }
 .index-division-10-1-2 p {
   font-size: 18px;
-  margin-top: 80px;
+  margin-top: 10px;
   text-align: justify;
 }
 .index-division-10-2 button {
@@ -789,6 +792,13 @@ h3 {
   padding-top: 15px;
   padding-bottom: 15px;
   letter-spacing: 3px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+}
+.index-division-10-2 button:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .index-footer {

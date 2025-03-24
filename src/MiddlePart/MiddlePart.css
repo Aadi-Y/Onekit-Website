@@ -31,10 +31,10 @@
   min-height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-right: 140px;
   margin-left: 20px;
-  margin-bottom: 180px;
+  margin-bottom: 100px;
 }
 
 .index-div-5-2-1 h2,
@@ -61,6 +61,7 @@
   position: sticky;
   top: 150px;
   height: fit-content;
+  /* margin-bottom: 200px; */
 }
 
 .index-division-5-1 ul {
@@ -68,7 +69,7 @@
   top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2rem;
 }
 
 .index-division-5-1 li {

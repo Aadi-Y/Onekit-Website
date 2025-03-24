@@ -1,5 +1,6 @@
 import React from "react";
 import "./Landing.css";
+import { Link } from "react-router-dom";
 import wordmark from "../assets/wordmark.png";
 import logomark from "../assets/logomark.png";
 import RivaraMockUp from "../assets/Rivara.png";
@@ -22,11 +23,12 @@ import CopyWriter from "../assets/CopyWriter.jpg";
 import { BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
-import { FaBehance } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 //component
 import MiddlePart from "../MiddlePart/MiddlePart.jsx";
+import ReachUs from "../ReachUs/ReachUs.jsx";
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -255,7 +257,7 @@ function Landing() {
                   got us. Not just us, you too. These people are backed up by
                   loyal audiences who relate themselves with them. So why still
                   underestimate the power of the new age word-of-mouth
-                  marketing? Let Grustl be the bridge between the brand and the
+                  marketing? Let onekit be the bridge between the brand and the
                   influencer, so the influencer as well as the brand can skip
                   the tedious process of outreach, building strategies, and
                   running campaigns.
@@ -274,7 +276,7 @@ function Landing() {
                   Questions like what is the meaning of the brand, why does it
                   exist, what is the market volume, how to win over competitors
                   and hence forth must be addressed. Before vaguely coming up
-                  with solutions we at Grustl do intense case studies and
+                  with solutions we at onekit do intense case studies and
                   immense research to full-fill the problem of how the brand
                   wants to be perceived and how the ideal customer perceives the
                   brand.
@@ -288,13 +290,13 @@ function Landing() {
                 viewport={{ amount: 0.3 }}
                 className="index-div-5-2-4"
               >
-                <h2>Borrow the Grustl Brains</h2>
+                <h2>Borrow the onekit Brains</h2>
                 <p>
                   More than time burnt on designing and planning content, we
                   spend majority of our time on analysing the needs of brands.
                   By just pointing out the North Star brand which is nothing but
                   the brands those are similar to the brand that we want to
-                  create or become, we at grustl can obtain insights and
+                  create or become, we at onekit can obtain insights and
                   concepts to get you there to where you there to where you
                   wanted to be.
                 </p>
@@ -326,9 +328,9 @@ function Landing() {
                 <img src={MarketingConsultant} alt="" />
                 <img src={CopyWriter} alt="" />
                 <img src={Writer} alt="" />
-                <img src={ContentCreater} alt="" />
-                <img src={Backend} alt="" />
-                <img src={Editor} alt="" />
+                <img src="/" alt="" />
+                <img src="/" alt="" />
+                <img src="/" alt="" />
               </div>
             </section>
           </section>
@@ -336,7 +338,7 @@ function Landing() {
           <section className="index-section-7">
             <div className="index-division-7-1">
               <div className="index-division-header">
-                <h2 className="meet">Meet</h2>
+                <h3 className="meet">Meet</h3>
                 <h2>The Founders</h2>
               </div>
               <motion.p
@@ -351,7 +353,7 @@ function Landing() {
                 a highly sought-after designer in the country. He is known for
                 consistently coming up with innovative and original ideas,
                 making him a valuable asset in the creative industry. Sharing a
-                common vision and drive for success, the two founded Grustl,
+                common vision and drive for success, the two founded onekit,
                 filling a gap in the market for a creative agency that
                 understands the importance of out-of-the-box thinking for
                 businesses. Together, they identified a problem in the
@@ -396,7 +398,7 @@ function Landing() {
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04 }}
                 className="index-division-9-11"
               >
                 <div className="index-division-9-1-1">
@@ -413,7 +415,9 @@ function Landing() {
                     attract customers and boost brand awareness and enrich
                     websites with new blog posts, guides and marketing copy.
                   </p>
-                  <button>REACH US</button>
+                  <Link to="/reachUs">
+                    <button>REACH US</button>
+                  </Link>
                 </div>
               </motion.div>
 
@@ -422,7 +426,7 @@ function Landing() {
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04 }}
                 className="index-division-9-12"
               >
                 <div className="index-division-9-1-3">
@@ -439,7 +443,9 @@ function Landing() {
                     and video content, managing posts and responding to
                     followers.
                   </p>
-                  <button>REACH US</button>
+                  <Link to="/reachUs">
+                    <button>REACH US</button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -450,7 +456,7 @@ function Landing() {
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04 }}
                 className="index-division-9-13"
               >
                 <div className="index-division-9-2-1">
@@ -467,7 +473,9 @@ function Landing() {
                     to brainstorm and create high quality video content that
                     reflect branding priorities.
                   </p>
-                  <button>REACH US</button>
+                  <Link to="/reachUs">
+                    <button>REACH US</button>
+                  </Link>
                 </div>
               </motion.div>
 
@@ -476,7 +484,7 @@ function Landing() {
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04 }}
                 className="index-division-9-14"
               >
                 <div className="index-division-9-2-3">
@@ -495,7 +503,9 @@ function Landing() {
                     and also work with the processing lab and post-production
                     team.
                   </p>
-                  <button>REACH US</button>
+                  <Link to="/reachUs">
+                    <button>REACH US</button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -540,18 +550,39 @@ function Landing() {
               viewport={{ amount: 0.3 }}
               className="index-division-10-2"
             >
-              <button>CONNECT</button>
+              <Link to="/contact">
+                <button>CONTACT</button>
+              </Link>
             </motion.div>
           </motion.section>
         </main>
         <footer className="index-footer">
           <section className="index-footer-section">
             <div className="index-footer-icons-division">
-              <BsInstagram />
-              <FaTwitter />
-              <FiYoutube />
-              <FaBehance />
-              <FaLinkedinIn />
+              <a
+                href="https://www.instagram.com/onekit.inc/
+"
+              >
+                <BsInstagram />
+              </a>
+              <a
+                href="https://x.com/onekittweets
+"
+              >
+                <FaTwitter />
+              </a>
+
+              {/* <FiYoutube /> */}
+              <a
+                href="https://github.com/onekit-inc
+"
+              >
+                <FaGithub />
+              </a>
+
+              <a href="https://www.linkedin.com/company/onekit-inc/">
+                <FaLinkedinIn />
+              </a>
             </div>
             <div className="index-footer-main-content">
               <p>
