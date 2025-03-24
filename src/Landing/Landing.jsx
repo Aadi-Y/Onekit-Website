@@ -26,7 +26,7 @@ import { FaBehance } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 //component
-import MiddlePart from "./MiddlePart.jsx";
+import MiddlePart from "../MiddlePart/MiddlePart.jsx";
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
