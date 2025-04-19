@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "./ReachUs.css";
+import "./ReachUs.css";
 
 const ReachUs = () => {
   const [name, setName] = useState("");
@@ -29,20 +29,23 @@ const ReachUs = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:8000/send-reachUs-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          portfolio,
-          privacyPolicy,
-          futureOpportunities,
-        }),
-      });
+      const response = await fetch(
+        "https://onekit-backend.vercel.app/send-reachUs-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            portfolio,
+            privacyPolicy,
+            futureOpportunities,
+          }),
+        }
+      );
 
       if (response.ok) {
         alert("Email sent successfully!");
@@ -117,7 +120,7 @@ const ReachUs = () => {
 
         <div className="reach-cont1">
           <h1>Let'onekit.</h1>
-          <h1 style={{ fontWeight: 100 }}>together</h1>
+          <p>together</p>
         </div>
       </div>
     </>

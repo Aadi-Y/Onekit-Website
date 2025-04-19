@@ -1,6 +1,6 @@
 import React from "react";
 import "./Landing.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import wordmark from "../assets/wordmark.png";
 import logomark from "../assets/logomark.png";
 import RivaraMockUp from "../assets/Rivara.png";
@@ -19,6 +19,7 @@ import ContentCreater from "../assets/MediaContenter.jpg";
 import MarketingConsultant from "../assets/MarketingConsultant.jpg";
 import ThreeDArtist from "../assets/3dArtist.jpg";
 import CopyWriter from "../assets/CopyWriter.jpg";
+import SocialMediaManager from "../assets/SocialMediaManager.jpg";
 //Icons
 import { BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
@@ -64,6 +65,13 @@ function Landing() {
       window.removeEventListener("scroll", handleScrolling);
     };
   }, []);
+
+  const navigate = useNavigate();
+
+  function handleReachPage(e){
+    e.preventDefault();
+    navigate("/reachUs");
+  }
 
   return (
     <>
@@ -321,14 +329,14 @@ function Landing() {
                 <img src={ThreeDArtist} alt="" />
                 <img src={Designer} alt="" />
                 <img src={ContentCreater} alt="" />
+                <img src={SocialMediaManager} alt="" />
                 <img src={Backend} alt="" />
-                <img src={Editor} alt="" />
               </div>
               <div className="index-division-6-3">
+                <img src={Editor} alt="" />
                 <img src={MarketingConsultant} alt="" />
                 <img src={CopyWriter} alt="" />
                 <img src={Writer} alt="" />
-                <img src="/" alt="" />
                 <img src="/" alt="" />
                 <img src="/" alt="" />
               </div>
@@ -347,17 +355,17 @@ function Landing() {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 viewport={{ amount: 0.3 }}
               >
-                Sanjeev has a successful entrepreneurial journey of over 5 years
-                under his belt. With expertise in scaling startups and building
-                strategies for top brands, he joined forces with Prateek who is
-                a highly sought-after designer in the country. He is known for
-                consistently coming up with innovative and original ideas,
-                making him a valuable asset in the creative industry. Sharing a
-                common vision and drive for success, the two founded onekit,
-                filling a gap in the market for a creative agency that
-                understands the importance of out-of-the-box thinking for
-                businesses. Together, they identified a problem in the
-                commercial space and came up with a solution.
+                Dharun Balaji has a successful entrepreneurial journey of over 5
+                years under his belt. With expertise in scaling startups and
+                building strategies for top brands, he joined forces with
+                Kishore, a highly sought-after designer in the country. Known
+                for consistently bringing innovative and original ideas to the
+                table, Kishore is a valuable asset in the creative industry.
+                Sharing a common vision and drive for success, the two founded
+                OneKit, addressing a gap in the market for a creative agency
+                that prioritizes out-of-the-box thinking for businesses.
+                Together, they identified a problem in the commercial space and
+                developed a solution.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -383,7 +391,7 @@ function Landing() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5, ease: "linear" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ amount: 0.3 }}
             >
               <p className="join">Join the life at</p>
@@ -396,12 +404,16 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.04 }}
+                transition={{
+                  opacity: { duration: 1, ease: "easeInOut" },
+                  y: { duration: 1, ease: "easeInOut" },
+                  scale: { duration: 0.4, ease: "easeInOut" },
+                }}
                 className="index-division-9-11"
               >
-                <div className="index-division-9-1-1">
+                <div className="index-division-9-1-1" onClick={handleReachPage}>
                   <h2>Content</h2>
                   <h2>Writer</h2>
                   <p>craft</p>
@@ -424,12 +436,16 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.04 }}
+                transition={{
+                  opacity: { duration: 1, ease: "easeInOut" },
+                  y: { duration: 1, ease: "easeInOut" },
+                  scale: { duration: 0.4, ease: "easeInOut" },
+                }}
                 className="index-division-9-12"
               >
-                <div className="index-division-9-1-3">
+                <div className="index-division-9-1-3" onClick={handleReachPage}>
                   <h2>Social Media </h2>
                   <h3>Admin</h3>
                   <p>orchestrate</p>
@@ -454,12 +470,16 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.04 }}
+                transition={{
+                  opacity: { duration: 1, ease: "easeInOut" },
+                  y: { duration: 1, ease: "easeInOut" },
+                  scale: { duration: 0.4, ease: "easeInOut" },
+                }}
                 className="index-division-9-13"
               >
-                <div className="index-division-9-2-1">
+                <div className="index-division-9-2-1" onClick={handleReachPage}>
                   <h3>Motion Graphic</h3>
                   <h2>Designer</h2>
                   <p>craft mesmerizing</p>
@@ -482,12 +502,16 @@ function Landing() {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={scrollPos ? "down" && { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ amount: 0.2 }}
                 whileHover={{ scale: 1.04 }}
+                transition={{
+                  opacity: { duration: 1, ease: "easeInOut" },
+                  y: { duration: 1, ease: "easeInOut" },
+                  scale: { duration: 0.4, ease: "easeInOut" },
+                }}
                 className="index-division-9-14"
               >
-                <div className="index-division-9-2-3">
+                <div className="index-division-9-2-3" onClick={handleReachPage}>
                   <h3>Director Of</h3>
                   <h2>Photography</h2>
                   <p>capture</p>
